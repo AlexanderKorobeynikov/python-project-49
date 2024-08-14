@@ -9,7 +9,8 @@ packages = [
 ]
 [tool.poetry.scripts]
 brain-games = "brain_games.scripts.brain_games:main"
-
+brain-even = "brain_games.scripts.brain_even:main"
+test = "brain_games.scripts.test:main"
 [tool.poetry.dependencies]
 python = "^3.10"
 prompt = "^0.4.1"
