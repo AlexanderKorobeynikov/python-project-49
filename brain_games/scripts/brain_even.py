@@ -1,10 +1,13 @@
 import random
 import prompt
-from brain_games.scripts.brain_games import main
 
+
+from brain_games.scripts.brain_games import main, username
 
 
 def game():
+    main()
+
     print('Answer "yes" if the number is even, otherwise answer "no".')
     i = 0
     while i < 3:
@@ -18,14 +21,11 @@ def game():
         else:
             i = 0
             print(f"'{ans}' is wrong answer ;(. Correct answer was '{coransw}'\n"
-                  f"Let's try again, {name}!")
-    print(f'Congratulations {name}!')
+                  f"Let's try again, {username}!")
+    print(f'Congratulations {username}!')
 
 
-main()
+if __name__ == '__main__':
+    game()
 
 
-from brain_games.cli import name
-
-
-game()
