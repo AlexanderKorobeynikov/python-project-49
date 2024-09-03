@@ -1,0 +1,41 @@
+import random
+import prompt
+from brain_games.scripts.brain_games import main, welcome_user
+
+def gen_operator():
+    num1 = random.randint(1, 50)
+    num2 = random.randint(1, 50)
+    operator = random.choice(['+', '-', '*'])
+
+    if operator == '+':
+        cor_answ = num1 + num2
+    elif operator == '-':
+        cor_answ = num1 - num2
+    else:
+        cor_answ = num1 * num2
+
+    return f"{num1} {operator} {num2}", cor_answ
+
+def game():
+    main()  # Приветствие
+    username = welcome_user()
+    print('What is the result of the expression?')
+
+    i = 0
+    while i < 3:
+        expression, cor_answ = gen_operator()
+        print(f"Question: {expression}")
+        answer = int(prompt.string('Your answer: '))
+        
+        if answer == correct_answer:
+            i += 1
+            print('Correct!')
+        else:
+            print(f"'{answer}' is wrong answer ;(. Correct answer was '{correct_answer}'\n"
+                  f"Let's try again, {username}!")
+            i = 0  # Сбросить счетчик правильных ответов
+
+    print(f'Congratulations, {username}!')
+
+if __name__ == '__main__':
+    game()

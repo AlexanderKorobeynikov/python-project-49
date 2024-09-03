@@ -2,12 +2,12 @@ import random
 import prompt
 
 
-from brain_games.scripts.brain_games import main, username
+from brain_games.scripts.brain_games import main, welcome_user
 
 
 def game():
     main()
-
+    username = welcome_user()
     print('Answer "yes" if the number is even, otherwise answer "no".')
     i = 0
     while i < 3:
