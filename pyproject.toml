@@ -14,8 +14,8 @@ packages = [
 brain-calc = "brain_games.scripts.brain_calc:game"
 brain-games = "brain_games.scripts.brain_games:main"
 brain-even = "brain_games.scripts.brain_even:game"
-
-
+brain-gcd = "brain_games.scripts.brain_gcd:game"
+brain-progression = "brain_games.scripts.brain_progression:game"
 [tool.poetry.dependencies]
 python = "^3.10"
 prompt = "^0.4.1"
